@@ -52,6 +52,11 @@ func initPingSerial() bool {
 	} else if _, err := os.Stat("/dev/softrf"); err == nil {
 		device = "/dev/softrf"
 		baudrate = int(38400)
+	} else if _, err := os.Stat("/dev/aero"); err == nil {
+		// 99-uavionix.rules 0403:6014
+		device = "/dev/aero"
+		baudrate = int(115200)
+		pingDeviceModel = 1
 	} else if _, err := os.Stat("/dev/pingusb"); err == nil {
 		// 99-uavionix.rules 0403:6015
 		device = "/dev/pingusb"

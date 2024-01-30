@@ -10,3 +10,4 @@ SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}==
 # Aerobits Aero/Aero Pro MavLink Device (ID 0403:6014 Future Technology Devices International, Ltd Bridge(I2C/SPI/UART/FIFO))
 # Edit vendor id and product id to match UART to USB bridge being used (Run lsusb command on Raspberry Pi). **CAN'T BE SAME AS PingUSB**
 SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6014", SYMLINK+="aero"
+SUBSYSTEM=="tty", SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5800", SYMLINK+="aero"
